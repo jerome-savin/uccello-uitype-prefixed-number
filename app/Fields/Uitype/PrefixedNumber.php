@@ -47,10 +47,10 @@ class PrefixedNumber implements Uitype
             $class.=' jsdev_input_suffixed';
         return [
             'attr' => [
-                'data-min' => $field->data->min ?? null,
-                'data-max' => $field->data->max ?? null,
-                'data-precision' => $field->data->precision ?? 2,
-                'data-step' => $field->data->step ?? 0.01,
+                'min' => $field->data->min ?? null,
+                'max' => $field->data->max ?? null,
+                'precision' => $field->data->precision ?? 2,
+                'step' => $field->data->step ?? 0.01,
                 'autocomplete' => 'off',
                 'class' => $class
             ],
@@ -107,10 +107,10 @@ class PrefixedNumber implements Uitype
     public function askFieldOptions(\StdClass &$module, \StdClass &$field, InputInterface $input, OutputInterface $output)
     {
         // Minimum value
-        $field->data->min = (int)$output->ask('What is the minimum value?');
+        $field->data->min = $output->ask('What is the minimum value?');
 
         // Maximum value
-        $field->data->max = (int)$output->ask('What is the maximum value?');
+        $field->data->max = $output->ask('What is the maximum value?');
 
         // Increment
         $field->data->step = (int)$output->ask('What is the increment?', 0.01);

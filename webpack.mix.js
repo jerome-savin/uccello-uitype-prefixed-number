@@ -7,8 +7,7 @@ mix.autoload(autoload)
 
 mix.setPublicPath('public')
 
-mix.js('./resources/assets/js/app.js', 'public/js')
-   .sass('./resources/assets/sass/app.scss', 'public/css')
+mix.sass('./resources/sass/app.scss', 'public/css')
    .version()
 
 // Copy all compiled files into main project (auto publishing)

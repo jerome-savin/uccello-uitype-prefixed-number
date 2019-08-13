@@ -6,7 +6,7 @@
     top: 0.8rem;
     right: 1rem;
     font-style: normal;
-    text-align: right;
+    text-align: left;
 }
 
 .jsdev_prefix{
@@ -30,9 +30,17 @@ input[type='number'].jsdev_input_suffixed{
     width: calc(100% - 3.5rem) !important;
     margin-right: 3rem !important;
     text-align: right;
+    padding-right: 10px;
+    border-right: 20px;
 }
 
 input[type='number'].jsdev_input_prefixed{
     width: calc(100% - 3rem) !important;
     margin-left: 3rem !important;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }

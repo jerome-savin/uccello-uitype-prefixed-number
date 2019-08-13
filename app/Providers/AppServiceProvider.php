@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
   public function boot()
   {
     // Views
-    $this->loadViewsFrom(__DIR__ . '/../../resources/assets/views', 'uccello-uitype-prefixed-number');
+    $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'uccello-uitype-prefixed-number');
 
     // Translations
     $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'uccello-uitype-prefixed-number');
