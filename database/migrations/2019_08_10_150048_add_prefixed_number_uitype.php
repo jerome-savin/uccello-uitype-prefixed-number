@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Cache;
 use Uccello\Core\Models\Uitype;
 
 class AddPrefixedNumberUitype extends Migration
@@ -18,6 +19,9 @@ class AddPrefixedNumberUitype extends Migration
         $uitype->name = 'prefixed_number';
         $uitype->class = 'JeromeSavin\UccelloUitypePrefixedNumber\Fields\Uitype\PrefixedNumber';
         $uitype->save();
+
+        Cache::forget('uitypes_by_name');
+        Cache::forget('uitypes_by_id');
     }
 
     /**
