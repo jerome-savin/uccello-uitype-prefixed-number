@@ -16,7 +16,7 @@ class AddPrefixedNumberUitype extends Migration
     {
         $uitype = new Uitype();
         $uitype->name = 'prefixed_number';
-        $uitype->class = 'JeromeSavin\UccelloUitypePrefixedNumber\PrefixedNumber';
+        $uitype->class = 'JeromeSavin\UccelloUitypePrefixedNumber\Fields\Uitype\PrefixedNumber';
         $uitype->save();
     }
 
