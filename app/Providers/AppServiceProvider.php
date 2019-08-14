@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
     // Publish assets
     $this->publishes([
-      __DIR__ . '/../../resources/views' => base_path('resources/views/vendor/jerome-savin/uccello-uitype-prefixed-number'),
+      __DIR__ . '/../../public' => public_path('vendor/jerome-savin/uccello-uitype-prefixed-number'),
     ]); // CSS
 
   }
